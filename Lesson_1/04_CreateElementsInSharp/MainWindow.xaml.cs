@@ -50,7 +50,6 @@ namespace _04_CreateElementsInSharp
                 panel.Children.Add(text);
                 panel.Children.Add(text1);
                 panel.Children.Add(text2);
-                
 
                 MyGrid.Children.Add(panel);
                 Grid.SetRow(panel, counter);
