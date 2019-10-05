@@ -1,0 +1,34 @@
+﻿<Window x:Class="_02_TextBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_TextBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label FontSize="30" FontFamily="./#Xenowort">This is my project</Label>
+            <TextBox Height="200"
+                     AcceptsReturn="True" 
+                     Background="AliceBlue" 
+                     CaretBrush="Aqua" 
+                     HorizontalScrollBarVisibility="Visible"
+                     SelectionBrush="Blue"
+                     SelectionChanged="TextBox_SelectionChanged"
+                     TextChanged="TextBox_TextChanged"
+                     TextWrapping="Wrap"
+                     SpellCheck.IsEnabled="True"
+                     FontFamily="./#Xanadu"
+                     >
+                
+                     <!--IsReadOnly="True"-->
+               
+            </TextBox>
+            <Label Name="lbl"></Label>
+            <Label Name="lbl1"></Label>
+            <Label Name="lbl2"></Label>
+            <Label Name="lbl3"></Label>
+        </StackPanel>
+    </Grid>
+</Window>

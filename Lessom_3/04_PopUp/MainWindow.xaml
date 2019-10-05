@@ -1,0 +1,38 @@
+﻿<Window x:Class="_04_PopUp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_04_PopUp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Width="150" Height="100" Background="Aqua" Click="Button_Click">Press My</Button>
+        <Popup Name="popup" IsOpen="False"
+               StaysOpen="False"
+               Placement="Mouse"
+               PopupAnimation="Scroll"
+               AllowsTransparency="True">
+            <Border>
+                <Border.Background>Pink</Border.Background>
+                <Border.CornerRadius>20</Border.CornerRadius>
+                <Border.BorderBrush>Red</Border.BorderBrush>
+                <Border.BorderThickness>10</Border.BorderThickness>
+                <ListBox Background="Pink">
+                <StackPanel Orientation="Horizontal" >
+                    <Label>Enter name</Label>
+                    <TextBox Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Enter name</Label>
+                    <TextBox Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Enter name</Label>
+                    <TextBox Width="200"></TextBox>
+                </StackPanel>
+            </ListBox>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>

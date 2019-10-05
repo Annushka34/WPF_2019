@@ -1,0 +1,20 @@
+﻿<Window x:Class="_05_DragAndDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_05_DragAndDrop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+        <StackPanel Orientation="Horizontal" Height="200">
+            <TextBox Width="200" Margin="20" SelectionChanged="TextBox_SelectionChanged">Hello</TextBox>
+            <Label Width="200" Margin="20">Some text</Label>
+        </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="200" Height="200" Margin="20" AllowDrop="True" >Hello</TextBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
