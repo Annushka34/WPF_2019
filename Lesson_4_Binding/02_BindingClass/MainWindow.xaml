@@ -1,0 +1,72 @@
+﻿<Window x:Class="_02_BindingClass.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_BindingClass"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="stack">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="20"></Setter>
+                    <Setter Property="Margin" Value="20,5"></Setter>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="18"></Setter>
+                    <Setter Property="Margin" Value="10"></Setter>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Label>Name</Label>
+            <TextBlock Text="{Binding Name}"></TextBlock>
+            <Label>Surname</Label>
+            <TextBlock Text="{Binding Surname}"></TextBlock>
+            <Label>City</Label>
+            <TextBlock Text="{Binding Address.City}"></TextBlock>
+            <Label>Street</Label>
+            <TextBlock Text="{Binding Address.Street}"></TextBlock>
+
+            <ComboBox Name="cmb" SelectionChanged="Cmb_SelectionChanged">                
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <ListBox Name="list" >
+            
+            </ListBox>
+
+            <ComboBox Name="list2" SelectionChanged="List2_SelectionChanged">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="p1.jpg" Height="50" Width="50"></Image>
+                    <TextBlock Margin="20">Person 1</TextBlock>
+                    <TextBlock Margin="20">Programmer</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="p2.jpg" Height="50" Width="50"></Image>
+                    <TextBlock Margin="20">Person 2</TextBlock>
+                    <TextBlock Margin="20">Programmer</TextBlock>
+                </StackPanel>
+            </ComboBox>
+            <TextBlock Name="selected"></TextBlock>
+
+            <StackPanel Name="stackNewPerson">
+                <Button Click="Button_Click_1">Add new person</Button>
+                <Label>Name</Label>
+                <TextBox Text="{Binding Name}"></TextBox>
+                <Label>Surname</Label>
+                <TextBox Text="{Binding Surname}"></TextBox>
+                <Label>City</Label>
+                <TextBox Text="{Binding Address.City}"></TextBox>
+                <Label>Street</Label>
+                <TextBox Text="{Binding Address.Street}"></TextBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

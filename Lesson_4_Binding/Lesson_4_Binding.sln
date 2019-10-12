@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_BindingProperty", "Lesson_4_Binding\01_BindingProperty.csproj", "{81B1749F-0898-4DF6-97FA-2F7320E8B994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_BindingClass", "02_BindingClass\02_BindingClass.csproj", "{C80A0830-6B8B-443C-8876-76F4E272E93D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81B1749F-0898-4DF6-97FA-2F7320E8B994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B1749F-0898-4DF6-97FA-2F7320E8B994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B1749F-0898-4DF6-97FA-2F7320E8B994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B1749F-0898-4DF6-97FA-2F7320E8B994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C80A0830-6B8B-443C-8876-76F4E272E93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C80A0830-6B8B-443C-8876-76F4E272E93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C80A0830-6B8B-443C-8876-76F4E272E93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C80A0830-6B8B-443C-8876-76F4E272E93D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4BAB42F-3B19-41FF-9163-D7E870EEF348}
+	EndGlobalSection
+EndGlobal
