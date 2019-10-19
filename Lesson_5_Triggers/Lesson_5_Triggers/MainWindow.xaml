@@ -1,0 +1,107 @@
+﻿<Window x:Class="Lesson_5_Triggers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lesson_5_Triggers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Background" Value="Green"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="Height" Value="50"></Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="Pink"></Setter>
+                    <Setter Property="FontSize" Value="18"></Setter>
+                    <Setter Property="Foreground" Value="Red"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="meEl">
+            <Setter Property="Ellipse.Fill" Value="Blue"></Setter>
+            <Style.Triggers>
+                <Trigger Property="Ellipse.IsMouseOver" Value="true">
+                    <Setter Property="Ellipse.Fill" Value="Red"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="btnStyle">
+            <Setter Property="Control.Background">
+                <Setter.Value>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Bisque" Offset="0.2"></GradientStop>
+                        <GradientStop Color="Black" Offset="0.9"></GradientStop>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Button.IsPressed" Value="true">
+                    <Setter Property="Control.Margin" Value="20"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="txtStyle">
+            <Setter Property="Control.Background">
+                <Setter.Value>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Bisque" Offset="0.2"></GradientStop>
+                        <GradientStop Color="Blue" Offset="0.9"></GradientStop>
+                    </RadialGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Control.IsFocused" Value="True">
+                    <Setter Property="Control.Foreground" Value="Red"></Setter>
+                    <Setter Property="TextBox.BorderBrush" Value="LightBlue"></Setter>
+                    <Setter Property="TextBox.BorderThickness" Value="2"></Setter>
+                    <Setter Property="TextBox.Background" Value="White"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Button.Background" Value="Black" />
+                <Setter Property="Button.Foreground" Value="White" />
+                <Setter Property="Button.FontFamily" Value="Verdana" />
+                <Setter Property="Button.Margin" Value="10" />
+            </Style.Setters>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="True"/>
+                        <Condition Property="IsFocused" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                        <Setter Property="Foreground" Value="Red" />
+                        <Setter Property="Cursor" Value="Hand"></Setter>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+        <TextBlock>Hello</TextBlock>
+            <TextBlock>Hello</TextBlock>
+            <TextBlock>Hello</TextBlock>
+            <Ellipse Style="{StaticResource ResourceKey=meEl}" Height="50" Width="150"></Ellipse>
+            <Button Style="{StaticResource ResourceKey=btnStyle}" Height="50"></Button>
+            <TextBox Style="{StaticResource ResourceKey=txtStyle}">Hello</TextBox>
+            <TextBox Style="{StaticResource ResourceKey=txtStyle}">Hello</TextBox>
+            <Button Height="50" Width="150">PRESS ME</Button>
+        </StackPanel>
+    </Grid>
+</Window>
