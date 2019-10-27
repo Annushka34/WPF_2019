@@ -1,0 +1,119 @@
+﻿<Window x:Class="_03_Path.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_Path"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas>
+            <TextBlock Canvas.Top="50" FontSize="30">HELLO</TextBlock>
+            <Path Canvas.Top="50" Canvas.Left="10" Fill="DarkGreen">
+                <Path.Data>
+                    <GeometryGroup FillRule="EvenOdd">
+                        <RectangleGeometry Rect="0,0,200,50"></RectangleGeometry>
+                        <EllipseGeometry Center="70, 20" RadiusX="30" RadiusY="50"></EllipseGeometry>
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+            
+            <!--CombineGeometry-->
+            <Path Canvas.Top="30" Canvas.Left="220">
+                <Path.Data>
+                    <CombinedGeometry GeometryCombineMode="Exclude">
+                        <CombinedGeometry.Geometry1>
+                            <RectangleGeometry Rect="0,0,200,50"></RectangleGeometry>
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <EllipseGeometry Center="70, 20" RadiusX="30" RadiusY="50"></EllipseGeometry>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </Path.Data>
+
+                <Path.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="LavenderBlush" Offset="0.1"></GradientStop>
+                        <GradientStop Color="DarkBlue" Offset="0.9"></GradientStop>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+
+            <Path Canvas.Top="130" Canvas.Left="220">
+                <Path.Data>
+                    <CombinedGeometry GeometryCombineMode="Intersect">
+                        <CombinedGeometry.Geometry1>
+                            <RectangleGeometry Rect="0,0,200,50"></RectangleGeometry>
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <EllipseGeometry Center="70, 20" RadiusX="30" RadiusY="50"></EllipseGeometry>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </Path.Data>
+
+                <Path.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="LavenderBlush" Offset="0.1"></GradientStop>
+                        <GradientStop Color="DarkBlue" Offset="0.9"></GradientStop>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+
+            <Path Canvas.Top="190" Canvas.Left="220">
+                <Path.Data>
+                    <CombinedGeometry GeometryCombineMode="Union">
+                        <CombinedGeometry.Geometry1>
+                            <RectangleGeometry Rect="0,0,200,50"></RectangleGeometry>
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <EllipseGeometry Center="70, 20" RadiusX="30" RadiusY="50"></EllipseGeometry>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </Path.Data>
+
+                <Path.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="LavenderBlush" Offset="0.1"></GradientStop>
+                        <GradientStop Color="DarkBlue" Offset="0.9"></GradientStop>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+
+            <Path Canvas.Top="280" Canvas.Left="220">
+                <Path.Data>
+                    <CombinedGeometry GeometryCombineMode="Xor">
+                        <CombinedGeometry.Geometry1>
+                            <RectangleGeometry Rect="0,0,200,50"></RectangleGeometry>
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <EllipseGeometry Center="70, 20" RadiusX="30" RadiusY="50"></EllipseGeometry>
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </Path.Data>
+
+                <Path.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="LavenderBlush" Offset="0.1"></GradientStop>
+                        <GradientStop Color="DarkBlue" Offset="0.9"></GradientStop>
+                    </RadialGradientBrush>
+                </Path.Fill>
+            </Path>
+
+            <Path Stroke="Red" StrokeThickness="3" Canvas.Top="200">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure IsClosed="True" StartPoint="10,100">
+                            <LineSegment Point="100, 100" />
+                            <LineSegment Point = "100, 50" />
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+            <Path Canvas.Top="250" Stroke="Green" StrokeThickness="3" Data="M 10,100 L 100,100 L 100,50 Z"/>
+
+
+         
+        </Canvas>
+    </Grid>
+</Window>

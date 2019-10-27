@@ -1,0 +1,40 @@
+﻿<Window x:Class="_05_Trasform.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_05_Trasform"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas>
+            <Rectangle Canvas.Top="10" Canvas.Left="20" Fill="BurlyWood" Height="50" Width="150">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="50" CenterX="75" CenterY="25"></RotateTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Canvas.Top="10" Canvas.Left="20"  Fill="BurlyWood" Height="50" Width="150">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="25" CenterX="75" CenterY="25"></RotateTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Canvas.Top="10" Canvas.Left="20"  Fill="BurlyWood" Height="50" Width="150">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="75" CenterX="75" CenterY="25"></RotateTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <Rectangle Canvas.Top="170" Canvas.Left="20"  Fill="BurlyWood" Height="50" Width="150">
+                <Rectangle.RenderTransform>
+                    <ScaleTransform ScaleX="0.5"></ScaleTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <Rectangle Canvas.Top="20" Canvas.Left="190"  Fill="BurlyWood" Height="50" Width="150">
+                <Rectangle.RenderTransform>
+                    <SkewTransform AngleX="30"></SkewTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </Canvas>
+    </Grid>
+</Window>
