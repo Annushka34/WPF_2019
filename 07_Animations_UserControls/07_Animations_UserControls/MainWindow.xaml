@@ -1,0 +1,25 @@
+﻿<Window x:Class="_07_Animations_UserControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_07_Animations_UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Button Width="200" Height="100" Background="Red" Content="HELLO" Name="btn">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard Storyboard.TargetName="btn">
+                            <!--<DoubleAnimation  Storyboard.TargetProperty="Width" From="200" To="100" Duration="0:0:2" RepeatBehavior="5" AutoReverse="True"></DoubleAnimation>
+                            <DoubleAnimation  Storyboard.TargetProperty="Height" From="{Binding ElementName=btn, Path=ActualHeight}" To="50" Duration="0:0:2" RepeatBehavior="5" AutoReverse="True"></DoubleAnimation>-->
+                            <ColorAnimation  Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" From="Red" To="Black" Duration="0:0:2" RepeatBehavior="5" AutoReverse="True"></ColorAnimation>
+                            <DoubleAnimation  Storyboard.TargetProperty="FontSize" From="{Binding ElementName=btn, Path=FontSize}" To="26" Duration="0:0:2" RepeatBehavior="5" AutoReverse="True"></DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</Window>
